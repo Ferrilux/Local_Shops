@@ -1,0 +1,768 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Local shop",
+    "description": "Online shop where you can buy local products",
+    "version": "v1"
+  },
+  "paths": {
+    "/customers.json": {
+      "get": {
+        "summary": "list customers",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/customers/new": {
+      "get": {
+        "summary": "new customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/customers/{id}/edit": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "edit customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/customers/{id}.json": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "put": {
+        "summary": "update customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete customer",
+        "tags": [
+          "Customers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/orders.json": {
+      "get": {
+        "summary": "list orders",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/orders/new": {
+      "get": {
+        "summary": "new order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/orders/{id}/edit": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "edit order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/orders/{id}.json": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "put": {
+        "summary": "update order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete order",
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/payments.json": {
+      "get": {
+        "summary": "list payments",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/payments/new": {
+      "get": {
+        "summary": "new payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/payments/{id}/edit": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "edit payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/payments/{id}.json": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "put": {
+        "summary": "update payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete payment",
+        "tags": [
+          "Payments"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/products.json": {
+      "get": {
+        "summary": "list products",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/products/new": {
+      "get": {
+        "summary": "new product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/products/{id}/edit": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "edit product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/products/{id}.json": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "put": {
+        "summary": "update product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete product",
+        "tags": [
+          "Products"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "summary": "new session",
+        "tags": [
+          "Sessions"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create session",
+        "tags": [
+          "Sessions"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/logout": {
+      "delete": {
+        "summary": "delete session",
+        "tags": [
+          "Sessions"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/suppliers.json": {
+      "get": {
+        "summary": "list suppliers",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/suppliers/new": {
+      "get": {
+        "summary": "new supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/suppliers/{id}/edit": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "edit supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/suppliers/{id}.json": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "put": {
+        "summary": "update supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete supplier",
+        "tags": [
+          "Suppliers"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/users.json": {
+      "get": {
+        "summary": "list users",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/users/new": {
+      "get": {
+        "summary": "new user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/users/{id}/edit": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "edit user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/users/{id}.json": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "show user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          },
+          "404": {
+            "description": "invalid User_id"
+          }
+        }
+      },
+      "patch": {
+        "summary": "update user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "put": {
+        "summary": "update user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete user",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://{defaultHost}",
+      "variables": {
+        "defaultHost": {
+          "default": "localhost:3000"
+        }
+      }
+    }
+  ]
+}

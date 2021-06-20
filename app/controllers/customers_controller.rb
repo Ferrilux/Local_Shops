@@ -1,12 +1,23 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: %i[ show edit update destroy ]
+  swagger_controller :customers, 'Customers'
+  
 
   # GET /customers or /customers.json
+  swagger_api :index do
+    summary 'Returns all customers'
+    notes 'Notes...'
+  end
   def index
     @customers = Customer.all
   end
 
   # GET /customers/1 or /customers/1.json
+  swagger_api :show do
+    summary 'Returns one customer'
+    param :path, :id, :integer, :required, "Customer id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -56,6 +67,7 @@ class CustomersController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
@@ -66,4 +78,5 @@ class CustomersController < ApplicationController
     def customer_params
       params.require(:customer).permit(:Customer_id, :User_id, :First_Name, :Last_Name, :Phone, :Address_1, :Address_2, :City, :Postal_Code)
     end
+  
 end

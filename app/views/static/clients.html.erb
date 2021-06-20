@@ -1,0 +1,6 @@
+<h1>Moje zamówienia:</h1>
+<ul>
+<% for order in current_customer.orders do %>
+  <li>Data: <%= order.Order_Date %>, status:<%= order.Status %> </li>
+<% end %>
+</ul>

@@ -1,0 +1,1 @@
+json.Email current_user.Email

@@ -1,12 +1,22 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  swagger_controller :users, 'Users'
 
   # GET /users or /users.json
+  swagger_api :index do
+    summary 'Returns all users'
+    notes 'Notes...'
+  end
   def index
     @users = User.all
   end
 
   # GET /users/1 or /users/1.json
+  swagger_api :show do
+    summary 'Returns one user'
+    param :path, :id, :integer, :required, "User id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -20,6 +30,12 @@ class UsersController < ApplicationController
   end
 
   # POST /users or /users.json
+  swagger_api :create do
+    summary "Create a user"
+    param :form, "user[User_id]", :string, :required, "Users id"
+    param :form, "user[Email]", :string, :required, "Users Email"
+    param :form, "user[password]", :string, :required, "Users password"
+  end
   def create
     @user = User.new(user_params)
 

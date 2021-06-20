@@ -8,7 +8,7 @@ module SessionsHelper
     end
 
     def current_customer
-        @current_customer ||= Customer.find_by(id: session[:user_id])
+        @current_customer ||= Customer.find_by(User_id: session[:user_id])
     end
 
     def logged_in?

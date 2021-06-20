@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   def create
     respond_to do |format|
       user = User.find_by(Email: params[:session][:Email])
+      
       if user && user.authenticate(params[:session][:password])
         format.html {
           log_in user

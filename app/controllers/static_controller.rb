@@ -6,9 +6,9 @@ class StaticController < ApplicationController
         @orders = Order.all
     end
 
-    def feed
+    def clients  
         
-    end  
+    end 
     
-    #before_action :require_token, only: [:feed]
+    before_action :require_token, only: [:clients]
 end
